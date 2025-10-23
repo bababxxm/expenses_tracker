@@ -38,14 +38,18 @@ function AddExpense() {
 		  .from("expenses")
 		  .select("*")
 		console.log(data)
-		dispatch(init(data))
+    if (data) {
+      dispatch(init(data));
+    } else {
+      console.error("No data fetched");
+    }
 		if (error) console.error("Fetch error:", error)
 		else console.log("Fetched:", data)
 	  }
 	  
 	  useEffect(() => {
 		fetchExpenses()
-	  }, [])
+	  })
 
 	const dispatch = useDispatch()
 

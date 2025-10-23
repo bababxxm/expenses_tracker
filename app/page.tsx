@@ -2,6 +2,7 @@
 
 import AddExpense from "@/components/AddExpense";
 import ExpenseHeader from "@/components/ExpenseHeader";
+import ExpenseSummary from "@/components/ExpenseSummary";
 import ExpenseTable from "@/components/ExpenseTable";
 import { supabase } from "@/lib/supabase";
 import store from "@/store/store";
@@ -21,6 +22,7 @@ export default function Home() {
           <AddExpense/>
           <br></br>
           <ExpenseTable/>
+          <br></br>
         </div>
       </div>
     </Provider>
